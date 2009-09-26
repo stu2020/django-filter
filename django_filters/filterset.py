@@ -172,8 +172,8 @@ FILTER_FOR_DBFIELD_DEFAULTS = {
 
 class BaseFilterSet(object):
     filter_overrides = {}
-
-    def __init__(self, data=None, queryset=None, prefix=None):
+    
+    def __init__(self, data=None, queryset=None, prefix=None, **kwargs):
         self.is_bound = data is not None
         self.data = data or {}
         if queryset is None:
